@@ -1,0 +1,151 @@
+@import 'reset';
+@import 'fonts';
+
+@mixin contenedor{
+    width:1100px;
+    margin: auto;
+}
+
+header{
+    div{
+        background: black;
+        .fondo1{
+            background: white;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0px;
+        }
+        nav{
+            @include contenedor;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul{
+                display: flex;
+                justify-content: space-around; 
+                &.menu li{
+                    color:white;
+                    text-transform: uppercase;
+                    padding: 0px 8px;
+                    border-right: 1px solid white;
+                    font-family: $categorias;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+                &.iconos li {
+                    padding-right: 10px;
+                 color: darkgoldenrod;
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+.imagenes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    article div{
+        background: rgba(0,0,0,0.50);
+        padding: 25px;
+        justify-content: space-between;
+        top: -92px;
+        position: relative;
+        color: white;
+        h3,p{
+            margin-top: 5px;
+            font-family: $textos;
+            color:white;
+            span{
+                background: darkgoldenrod;
+                padding: 2px;
+                text-transform: uppercase;
+                color:white;
+                margin-left:5px;
+                border-radius: 2px;
+                font-weight: bold;
+                font-size: 12px;
+                font-family: $titulos;
+            }
+        }
+    }
+    
+}
+
+.secciones{
+    display: flex;
+    @include contenedor;
+    .grande{
+        flex:2.5;
+        article{
+            text-align: center;
+            .fashion {
+                display: block;
+                margin: 20px;  
+                text-transform: uppercase;
+                font-family:$categorias;
+                &:before, &:after{
+                width: 23%;
+                display: inline-block;
+                content: '';
+                position: relative;
+                bottom: 6px;
+                border: 1px dashed lightgrey;
+                margin-left: 26px;
+                }
+                &:before{
+                    margin-right: 26px;
+                } 
+            }
+            .boton {
+                border: 1px solid darkgoldenrod;
+                padding: 10px;
+                width: 25%;
+                margin-left: 317px;
+                border-radius: 6px;
+                display: block;
+                margin: auto;
+                font-family: $categorias;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            p{
+                width: 56%;
+                margin-left: 200px;
+                text-align: justify;
+                margin-bottom: 20px;
+                font-family: $textos;
+                color:grey;
+            }
+            h2{
+                font-family: $titulos;
+                font-size: 25px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .chica{
+        flex:0.5;
+    }
+}
+
+footer{
+    border-top: 1px dashed grey;
+    margin: 20px 0px;
+    padding-top: 20px;
+    span{
+        float: left;
+        margin-left: 15px;
+    }
+    ul{
+        float:right;
+        li{
+            display: inline;
+        }
+    }
+  
+}
+
